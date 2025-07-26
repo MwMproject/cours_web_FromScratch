@@ -5,15 +5,15 @@ Ce dépôt contient les projets et les exercices réalisés de la formation *Mas
 ## 🔧 Technologies apprises
 
 - HTML / CSS / SASS
-- JavaScript / TypeScript
-- React / Redux
+- JavaScript
+- React
 - Git / GitHub
 
 ## 📁 Projets
 
 - Maquettes HTML/CSS
 - Effets interactifs en JS
-- Apps avec API (Quiz, Flappy Bird…)
-- Applications React (Crypto Watch, Cooking App…)
+- Apps avec API
+- Applications React
 
 Ce dépôt est en constante évolution — Il évoluera au fil de mon apprentissage.
