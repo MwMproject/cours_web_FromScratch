@@ -25,3 +25,35 @@ btn2.addEventListener("click", () => {
 });
 
 //---------------------------------------------------------------
+
+//les mouse events
+const mousemove = document.querySelector(".mousemouve"); //déclare une variable qui selectionne la div mousemouve
+
+window.addEventListener("mousemove", (e) => {
+  // ajoute un evenement au mouvement de la souris dans la fenetre
+  mousemove.style.left = e.pageX + "px";
+  mousemove.style.top = e.pageY + "px";
+});
+
+window.addEventListener("mousedown", () => {
+  mousemove.style.transform = "scale(2) translate(-25%, -25%)"; // agrandit la div et la centre par rapport au curseur
+});
+window.addEventListener("mouseup", () => {
+  mousemove.style.transform = "scale(1) translate(-50%, -50%)"; // remet la div à sa taille initiale et la centre par rapport au curseur
+});
+
+questionContainer.addEventListener("mouseenter", () => {
+  questionContainer.style.background = "rgba(0,0,0,0.6)";
+}); // change le background de la div questionContainer au passage de la souris
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "rgba(43, 42, 42, 0.62)";
+}); // remet le background de la div questionContainer au passage de la souris
+
+answer.addEventListener("mouseover", () => {
+  answer.style.transform = "rotate(2deg)";
+}); // fait pivoter la réponse au passage de la souris
+//---------------------------------------------------------------
+
+//les keypress event
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
