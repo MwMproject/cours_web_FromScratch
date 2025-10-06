@@ -57,3 +57,20 @@ answer.addEventListener("mouseover", () => {
 //les keypress event
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
+const ring = () => {
+  const audio = new Audio();
+  audio.src = "./Enter.mp3";
+  audio.play();
+};
+
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key; // affiche la touche appuyée dans la div key
+  if (e.key === "j") {
+    keypressContainer.style.background = "pink"; // change le background de la div keypressContainer en rose si la touche j est appuyée
+  } else if (e.key === "h") {
+    keypressContainer.style.background = "teal"; // change le background de la div keypressContainer en teal si la touche h est appuyée
+  } else {
+    keypressContainer.style.background = "red"; // change le background de la div keypressContainer en rouge si une autre touche est appuyée
+  }
+  ring();
+});
