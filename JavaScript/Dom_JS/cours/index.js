@@ -120,3 +120,16 @@ form.addEventListener("submit", (e) => {
 //---------------------------------------------------------------
 
 //les load events
+window.addEventListener("load", () => {
+  console.log("document chargé");
+}); // affiche un message dans la console lorsque la page est complètement chargée
+//---------------------------------------------------------------
+
+//les forEach
+const boxes = document.querySelectorAll(".box"); // sélectionne toutes les divs avec la classe box
+
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.9)"; // rétrécit la div cliquée
+  });
+});
