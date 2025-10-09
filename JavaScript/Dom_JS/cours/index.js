@@ -88,3 +88,35 @@ window.addEventListener("scroll", () => {
   } // fait disparaître la nav si on scroll de moins de 120px
 });
 //---------------------------------------------------------------
+
+//les form events
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+
+let pseudo = ""; // variable pour stocker le pseudo
+let language = ""; // variable pour stocker le language
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value; // stocke la valeur de l'input dans la variable pseudo
+});
+
+select.addEventListener("input", (e) => {
+  language = e.target.value; // stocke la valeur du select dans la variable language
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // empêche le rechargement de la page
+  if (cgv.checked) {
+    // vérifie si les CGV sont cochées
+    document.querySelector("form > div").innerHTML = `
+    <h3>Pseudo : ${pseudo}</h3>
+    <h4>Language préféré : ${language}</h4>
+    `; // affiche le pseudo et le language préféré dans la div du formulaire
+  } else {
+    alert("Veuillez accepter les CGV"); // affiche une alerte si les CGV ne sont pas cochées
+  }
+});
+//---------------------------------------------------------------
+
+//les load events
