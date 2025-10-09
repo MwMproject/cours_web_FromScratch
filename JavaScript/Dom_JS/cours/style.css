@@ -55,7 +55,7 @@ nav{
   height: 50px;
   background: rgba(59, 241, 3, 0.8);
   top: -50px;
-  transition: 0.4s;
+  transition: 0.45s;
 }
 ul{
   display: flex;
