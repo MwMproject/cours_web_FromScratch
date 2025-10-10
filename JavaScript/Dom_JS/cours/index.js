@@ -133,3 +133,29 @@ boxes.forEach((box) => {
     e.target.style.transform = "scale(0.9)"; // rétrécit la div cliquée
   });
 });
+
+//------------------------------------------------
+
+// addEventListener Vs onclick
+
+// document.body.onclick = function() {
+//   console.log("Scroll !");
+// };
+
+// Bubbling => fin (de base l'eventlistener est paramétré en mode Bublbing)
+document.body.addEventListener("click", () => {
+  console.log("click 1 !");
+});
+
+// Usecapture
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 2 !");
+  },
+  true
+);
+
+// https://gomakethings.com/what-is-that-third-argument-on-the-vanilla-js-addeventlistener-method-and-when-do-you-need-it/
+
+//-------------------------------------------------
