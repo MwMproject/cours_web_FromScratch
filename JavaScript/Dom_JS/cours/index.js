@@ -199,10 +199,10 @@ setTimeout(() => {
   questionContainer.style.borderRadius = "300px";
 }, 2000);
 
-let interval = setInterval(() => {
-  document.body.innerHTML +=
-    '<div class="box"> <h2>Nouvelle boite avec setInterval! </h2></div>';
-}, 1000);
+//let interval = setInterval(() => {
+//document.body.innerHTML +=
+//'<div class="box"> <h2>Nouvelle boite avec setInterval! </h2></div>';
+//}, 1000);
 
 document.body.addEventListener("click", () => {
   //e.target.remove();
@@ -251,3 +251,10 @@ console.log(navigator.userAgent);
 //console.log(history); //affiche l'historique dans la console
 // window.history.back(); // retourne en arrière dans l'historique
 // history.go(-2)
+//------------------------------------------------
+
+// SetProperty
+window.addEventListener("mousemove", (e) => {
+  nav.style.setProperty("--x", e.layerX + "px");
+  nav.style.setProperty("--y", e.layerY + "px");
+});
