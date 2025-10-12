@@ -170,3 +170,43 @@ document.body.addEventListener(
 // removeEventListener
 
 //-------------------------------------------------
+
+//Le BOM (Browser Object Model)
+
+//console.log(window.innerHeight);
+//console.log(window.scrollY);
+
+//window.open("http://google.com", "Cours JS", "height=600, width=800");
+//window.close();
+
+// Evenements adossés à window
+//alert("hello");
+
+//Confirm
+btn2.addEventListener("click", () => {
+  confirm("voulez-vous vraiment donner la mauvaise réponse...?");
+});
+
+// Prompt¨
+btn1.addEventListener("click", () => {
+  let answer = prompt("Entrez votre nom");
+  questionContainer.innerHTML += // = remplace le questionContainer += l'ajoute
+    "<h3>Bravo " + answer + " vous avez trouvé la bonne réponse ! </h3>";
+});
+
+// Time out (compte à rebours)
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+
+let interval = setInterval(() => {
+  document.body.innerHTML +=
+    '<div class="box"> <h2>Nouvelle boite avec setInterval! </h2></div>';
+}, 1000);
+
+document.body.addEventListener("click", (e) => {
+  //e.target.remove();
+  clearInterval(interval);
+});
+
+// Location
