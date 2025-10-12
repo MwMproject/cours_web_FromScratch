@@ -204,9 +204,18 @@ let interval = setInterval(() => {
     '<div class="box"> <h2>Nouvelle boite avec setInterval! </h2></div>';
 }, 1000);
 
-document.body.addEventListener("click", (e) => {
+document.body.addEventListener("click", () => {
   //e.target.remove();
   clearInterval(interval);
 });
 
-// Location
+// Location pour rediriger vers des les liens
+//console.log(location.href);
+//console.log(location.host);
+//console.log(location.pathname);
+//console.log(location.search);
+//location.replace("http://lequipe.fr");
+
+//window.onload = () => {
+//  location.href = "http://twitter.fr";
+//};
