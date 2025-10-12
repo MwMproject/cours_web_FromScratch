@@ -246,3 +246,8 @@ console.log(navigator.userAgent);
 // }
 
 // navigator.geolocation.getCurrentPosition(success, error, options);
+
+// History
+//console.log(history); //affiche l'historique dans la console
+// window.history.back(); // retourne en arrière dans l'historique
+// history.go(-2)
