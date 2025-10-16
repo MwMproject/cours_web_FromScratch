@@ -28,4 +28,4 @@ const bubbleMaker = () => {
   }, 8000); // Durée de vie de la bulle avant suppression
 };
 
-setInterval(bubbleMaker, 1000); // Appel de la fonction bubbleMaker toutes les 300 millisecondes
+setInterval(bubbleMaker, 300); // Appel de la fonction bubbleMaker toutes les 300 millisecondes
