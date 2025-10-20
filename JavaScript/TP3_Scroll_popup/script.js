@@ -13,13 +13,13 @@ window.addEventListener("scroll", function () {
     imgImprovise.style.opacity = "1";
     imgImprovise.style.transform = "none"; //  ou  translateY(0)
   }
+
+  // popup effect
+  if (scrollValue > 0.85) {
+    popup.style.opacity = "1";
+    popup.style.transform = "none"; //  ou  translateY(0)
+  }
 });
-
-// Créer un événement au scroll
-
-// Réduire la navbar quand on descend vers le bas, la remettre à sa taille initiale si on remonte tout en haut
-
-// Faire apparaitre l'image de la partie improvise
 
 // Faire apparaitre la popup quand on est en bas du site
 
