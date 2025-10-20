@@ -1,3 +1,5 @@
+let playOnce = true; // pour le popup s'affiche une seule fois
+
 window.addEventListener("scroll", function () {
   // navbar effect
   if (window.scrollY > 50) {
@@ -15,12 +17,15 @@ window.addEventListener("scroll", function () {
   }
 
   // popup effect
-  if (scrollValue > 0.85) {
+  if (scrollValue > 0.85 && playOnce) {
     popup.style.opacity = "1";
     popup.style.transform = "none"; //  ou  translateY(0)
+    playOnce = false; // pour que le popup s'affiche une seule fois
   }
 });
 
-// Faire apparaitre la popup quand on est en bas du site
-
-// Bonus : quand on clicke sur la popup elle disparait pour toujours
+// close popup
+closeBtn.addEventListener("click", () => {
+  popup.style.opacity = "0";
+  popup.style.transform = "translateY(500px)";
+});
