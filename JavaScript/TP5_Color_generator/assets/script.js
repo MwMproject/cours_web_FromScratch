@@ -24,7 +24,7 @@ function rgbGenerator() {
   document.body.appendChild(rgbText); // ajouter le nouveau texte
 }
 rgbGenerator(); // Appel initial pour afficher une couleur dès le chargement de la page
-setInterval(rgbGenerator, 3000); // Mettre à jour la couleur toutes les 3 secondes
+setInterval(rgbGenerator, 1000); // Mettre à jour la couleur toutes les 3 secondes
 
 // Vérsion From Scratch :
 // setInterval(() => {
