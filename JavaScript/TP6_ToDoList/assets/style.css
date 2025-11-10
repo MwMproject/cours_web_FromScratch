@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff3c00, #ebfc00);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-box {
+  background: #57a4ec;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  color: #333;
+  font-weight: bold;
+}
+
+#todo-form {
+  display: flex;
+  margin: 20px 0;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  background: linear-gradient(90deg, #ff9100, #ffd700);
+}
+
+button {
+  background-color: #ffd700;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+li {
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  padding-left: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li::before {
+  content: '🟩';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 18px;
+}
+
+li.checked::before {
+  content: '✅';
+}
+
+li.checked {
+  color: #888;
+}
