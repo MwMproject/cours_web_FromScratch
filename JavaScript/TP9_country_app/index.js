@@ -4,7 +4,7 @@ let countriesData = [];
 let sortMethod = "maxToMin";
 
 async function fetchCountries() {
-  await fetch("https://restcountries.com/v3.1/all")
+  await fetch("https://restcountries.com/v3.1/all?fields=name,capital,population,flags,translations")
     .then((res) => res.json())
     .then((data) => (countriesData = data));
 
